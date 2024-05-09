@@ -1,0 +1,10 @@
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f0e5;
+    min-height: 100%;
+    height: fit-content;
+    margin: 0;
+}
+

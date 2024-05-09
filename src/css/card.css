@@ -1,0 +1,35 @@
+#card-1{
+    background-image: url('../images/Squiggle_time_cake.png');
+    background-size: cover;
+}
+
+#card-2 {
+    background-image: url('../images/wedding_gown_cake.png');
+    background-size: cover;
+    background-position: 30%;
+}
+
+#card-3 {
+    background-image: url('../images/brain_cake.png');
+    background-size: cover;
+    background-position: 30%;
+}
+
+#card-4 {
+    background-image: url('../images/wedding_cake.png');
+    background-size: cover;
+    background-position: 70%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 20px;
+}
+
+h2 {
+    margin: 0;
+}

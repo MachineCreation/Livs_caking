@@ -1,0 +1,29 @@
+
+#menu {
+    display: flex;
+    justify-content: center;
+}
+
+#dropmenu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 100%;
+    display: block;
+    background-color: #f4f0e5;
+    border: .2em solid #4c300eff;
+    border-radius: 20px;
+    width: 225px;
+    padding: 10px;
+    z-index: 2;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 5px;
+}

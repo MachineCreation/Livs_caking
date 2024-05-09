@@ -1,0 +1,63 @@
+.carousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw - 5em);
+    margin: auto;
+    height: calc(100vh - 150px);
+  }
+  
+  .carousel-card {
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 15px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: .2em solid #4c300eff;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-button {
+    border: none;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button.active {
+    background-color: #666;
+  }
+
+  #top-left-lily {
+    background-image: url('../images/top-left.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 200px;
+    width: 205px;
+    top: 0;
+    left: -30px;
+  }
+  
+  #bottom-right-lily {
+    background-image: url('../images/bottom-right.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 205px;
+    position: absolute;
+    bottom: 20px;
+    right: -30px;
+  }
