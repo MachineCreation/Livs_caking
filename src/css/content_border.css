@@ -1,0 +1,27 @@
+
+.parent-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw - 5em);
+    min-width: 350px;
+    margin: auto;
+    height: calc(100vh - 150px);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 15px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: .2em solid #4c300eff;
+    border-radius: 20px;
+    text-align: center;
+    overflow: scroll;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

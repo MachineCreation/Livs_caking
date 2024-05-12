@@ -1,0 +1,11 @@
+button {
+    color: #b7ab9a;
+    -webkit-text-stroke: .04rem #4c300eff;
+    background-color: #f4f0e5;
+    border: .2em double #4c300eff;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px auto;
+    box-shadow: 0 0 10px 5px #f4f0e5;
+}

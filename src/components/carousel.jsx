@@ -1,13 +1,12 @@
-// nodes
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-// modules
+// Import Card components
 import CardOne from './cards/card_one';
 import CardTwo from './cards/card_two';
 import CardThree from './cards/card_three';
 import CardFour from './cards/card_four';
 
-//css
+// Import CSS
 import '../css/carousel.css';
 
 const cards = [
@@ -20,17 +19,40 @@ const cards = [
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [pause, setPause] = useState(false);
+  const [touchPosition, setTouchPosition] = useState(null); // State to keep track of touch start position
 
   const handleSelect = (index) => {
     setActiveIndex(index);
     setPause(true); // Pause the auto-scroll when a bullet is clicked
   };
 
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchPosition === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchPosition - currentTouch;
+
+    if (diff > 20) {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    } else if (diff < -20) {
+      setActiveIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+    }
+
+    setTouchPosition(null); // Reset touch position to prevent multiple swipes
+  };
+
   useEffect(() => {
     if (!pause) {
       const timer = setTimeout(() => {
         setActiveIndex((current) => (current + 1) % cards.length);
-      }, 5000); // Rotate every 3 seconds
+      }, 5000); // Rotate every 5 seconds
 
       return () => clearTimeout(timer);
     }
@@ -49,7 +71,9 @@ const Carousel = () => {
   }, [pause]);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container"
+         onTouchStart={handleTouchStart}
+         onTouchMove={handleTouchMove}>
       <div className="carousel-card">
         {cards[activeIndex]}
       </div>
@@ -58,11 +82,11 @@ const Carousel = () => {
           <button
             key={index}
             className={`nav-button ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => handleSelect(index)}
           ></button>
         ))}
-        </div>
-        <div id="top-left-lily"></div>
+      </div>
+      <div id="top-left-lily"></div>
       <div id="bottom-right-lily"></div>
     </div>
   );

@@ -9,14 +9,14 @@ function App() {
 
   return (
       <HashRouter>
-
+        <div id="overflow">
         <NavBar />
-        <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={<route.component />} />
-        ))}
-      </Routes>
-
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={<route.component />} />
+            ))}
+          </Routes>
+        </div>
       </HashRouter>
   );
 }

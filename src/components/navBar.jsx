@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 // modules
 import DropMenu from "./dropmenu";
-import '../css/nav_bar.css'
+import '../css/nav_bar.css';
+import TitleLogo from '../images/title_logo.png';
 
 
 
@@ -19,9 +20,9 @@ const NavBar = () => {
             <div id="logo">
             </div>
             <div id="title_logo">
-                <div id="menu">
-                    <img src="src\images\title_logo.png" alt=""
-                        onClick={ocMenu}/>
+                <div id="menu"
+                    onClick={ocMenu}>
+                    <img src={TitleLogo} alt="Title Logo"/>
                     {visMenu ? (
                         <DropMenu
                             ocMenu={ocMenu} />
