@@ -14,7 +14,7 @@ const Button = ({title, action}) => {
 
     return (
         <button onClick={handleClick}>
-            {title}
+            <span className='button-title'>{title}</span>
         </button>
     )
 }

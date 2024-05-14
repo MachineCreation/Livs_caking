@@ -26,12 +26,63 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     padding: none;
 }
 
+.card-header {
+    color: #e0d1bb;
+    -webkit-text-stroke: .05rem #4c300eff;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    filter: drop-shadow(0 0 10px black);
+    z-index: 1;
+}
+
+.card-content {
+    background-color: #e0d1bb67;
+    border-radius: 15px;
+    color: #4c300eff;
+    font-size: 1.25rem;
+    font-weight: 1000;
+    margin: 10px;
+    padding: 10px;
+}
+
+#instagram {
+    background-image: url('../images/instagram.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#twitter {
+    background-image: url('../images/twitter.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#facebook {
+    background-image: url('../images/facebook.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
 h2 {
     margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .card {
+        justify-content: space-around;
+    }
 }
