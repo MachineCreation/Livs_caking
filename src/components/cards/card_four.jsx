@@ -10,7 +10,7 @@ const CardFour = () => {
   }
 
   return (
-    <div id='card-2' className='card'>
+    <div id='card-4' className='card'>
       <h2 className='card-header'>Contact Me</h2>
       <div className='card-content'>
         <div id='twitter' onClick={() => window.open('https://www.twitter.com', '_blank')}></div>
@@ -18,8 +18,8 @@ const CardFour = () => {
         <div id="facebook" onClick={() => window.open('https://www.facebook.com', '_blank')}></div>
       </div>
       <Button
-        title={'BYO Cake Menu'}
-        action={'/Build-your-own'}
+        title={'Get To Know Me'}
+        action={'/contac'}
       />
     </div>
   );
