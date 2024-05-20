@@ -1,11 +1,19 @@
-import React from "react";
+import React from 'react';
+
+// modules
+import ContentBorder from '../components/structural_components/content_border';
+import CartComponent from '../components/page_components/cartComponent';
+
+//css
+import '../css/cart.css'
 
 
 function Cart() {
+  return (
+    <ContentBorder>
+      <CartComponent />
+    </ContentBorder>
+  );
+};
 
-    return (
-        <div>Cart</div>
-    )
-}
-
-export default Cart
+export default Cart;

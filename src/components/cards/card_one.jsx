@@ -1,7 +1,8 @@
 import React from 'react';
 
+
 // modules
-import Button from '../functional_components/button';
+import CButton from '../functional_components/button';
 
 // css
 import '../../css/card.css';
@@ -15,9 +16,9 @@ const CardOne = () => {
         or <br />
         - Mocha Berry Dream Cake
       </p>
-      <Button
+      <CButton
         title={'Specialty Cake Menu'}
-        action={'/specialty-cakes'}
+        action={'/menu#cake1'}
       />
     </div>
   );

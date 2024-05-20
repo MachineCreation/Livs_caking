@@ -1,7 +1,7 @@
 import React from 'react';
 
 //modules
-import Button from '../functional_components/button';
+import CButton from '../functional_components/button';
 
 const CardThree = () => {
   return (
@@ -9,7 +9,7 @@ const CardThree = () => {
       <h2 className='card-header'>I Love What I do!</h2>
       <p className='card-content'>Come see the cakes that I've made!
       </p>
-      <Button
+      <CButton
         title={'Gallery'}
         action={'/gallery'}
       />

@@ -27,3 +27,8 @@ li {
     list-style: none;
     margin: 5px;
 }
+
+.custom-link {
+    text-decoration: none;
+    color: #4c300eff;
+}

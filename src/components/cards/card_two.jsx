@@ -1,7 +1,7 @@
 import React from 'react';
 
 //modules
-import Button from '../functional_components/button';
+import CButton from '../functional_components/button';
 
 const CardTwo = () => {
   return (
@@ -15,7 +15,7 @@ const CardTwo = () => {
         - Filling
 
       </p>
-      <Button
+      <CButton
         title={'BYO Cake Menu'}
         action={'/Build-your-own'}
       />

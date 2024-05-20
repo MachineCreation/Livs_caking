@@ -1,7 +1,7 @@
 import React from 'react';
 
 //modules
-import Button from '../functional_components/button';
+import CButton from '../functional_components/button';
 
 const CardFour = () => {
 
@@ -17,9 +17,9 @@ const CardFour = () => {
         <div id='instagram' onClick={() => window.open('https://www.instagram.com', '_blank')}></div>
         <div id="facebook" onClick={() => window.open('https://www.facebook.com', '_blank')}></div>
       </div>
-      <Button
+      <CButton
         title={'Get To Know Me'}
-        action={'/contac'}
+        action={'/contact'}
       />
     </div>
   );

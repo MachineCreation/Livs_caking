@@ -1,11 +1,11 @@
 // Import the page components
 import landing_page from '../pages/landing_page';
-import SpecialtyCakes from '../pages/Specialty_cakes';
 import Cart from '../pages/cart';
-import BuildYourOwn from '../pages/byoc';
 import Contact from '../pages/contact';
 import Gallery from '../pages/gallery';
+import Menu from '../pages/menu';
 import not_found from '../components/not_found';
+import { HashLink } from 'react-router-hash-link';
 
 // Define the routes array
 const routes = [
@@ -14,16 +14,8 @@ const routes = [
         component: landing_page,
     },
     {
-        path: "/specialty-cakes",
-        component: SpecialtyCakes,
-    },
-    {
         path: "/cart",
         component: Cart,
-    },
-    {
-        path: "/Build-your-own",
-        component: BuildYourOwn,
     },
     {
         path: "/contact",
@@ -32,6 +24,10 @@ const routes = [
     {
         path: "/gallery",
         component: Gallery,
+    },
+    {
+        path: "/menu",
+        component: Menu
     },
     {
         component: not_found,

@@ -4,12 +4,12 @@ import React from "react";
 import '../../css/content_border.css';
 
 
-function ContentBorder({child}) {
+function ContentBorder({children}) {
 
     return (
             <div className="parent-container">
                 <div className="container">
-                    {child}
+                    {children}
                 </div>
             </div>
     )

@@ -17,3 +17,20 @@ body {
     margin: 0;
 }
 
+.font-large {
+    font-size: 2rem;
+}
+
+.font-medium {
+    font-size: 1.75rem;
+}
+
+.font-small {
+    font-size: 1rem;
+}
+
+.title {
+    color: #b7ab9a;
+    -webkit-text-stroke: .04rem #4c300eff;
+    margin: .5em;
+}

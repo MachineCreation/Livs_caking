@@ -1,22 +1,20 @@
-import { useNavigate } from 'react-router-dom';
 import React from "react";
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 //css
 import '../../css/func_components.css'
 
-const Button = ({title, action}) => {
+const CButton = ({title, action}) => {
 
-    const navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate(action)
-    }
 
     return (
-        <button onClick={handleClick}>
-            <span className='button-title'>{title}</span>
+        <button>
+            <Link className="button-link" smooth to={action}>{title}</Link>
         </button>
     )
 }
 
-export default Button
+export default CButton
+
