@@ -33,7 +33,7 @@ const DropMenu = ({ ocMenu }) => {
             <ul>
                 <li onClick={handleClick}><Link className="custom-link" smooth to="/">Home</Link></li>
                 <li onClick={handleClick}><Link className="custom-link" smooth to="/menu#cake1">Specialty Cakes</Link></li>
-                <li onClick={handleClick}><Link className="custom-link" smooth to="/menu#cake5">Build Your Own Cake</Link></li>
+                <li onClick={handleClick}><Link className="custom-link" smooth to="/menu#BYO">Build Your Own Cake</Link></li>
                 <li onClick={handleClick}><Link className="custom-link" smooth to="/menu">Menu</Link></li>
                 <li onClick={handleClick}><Link className="custom-link" smooth to="/contact">Get To Know Me</Link></li>
                 <li onClick={handleClick}><Link className="custom-link" smooth to="/gallery">Gallery</Link></li>

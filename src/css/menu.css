@@ -59,11 +59,7 @@
     margin: auto;
 }
 
-.bg-acc-dark {
-    
-}
-
-li::before {
+.BYO-content li::before {
     content: '- ';
 }
 
