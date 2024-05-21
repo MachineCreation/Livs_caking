@@ -60,7 +60,7 @@
 }
 
 .BYO-content li::before {
-    content: '- ';
+    content: '\2218  ';
 }
 
 .b-padding {

@@ -14,12 +14,12 @@ const CartComponent = () => {
 
     const customerEmailContent = `
       Thank you for your order. I will get back to you with a confirmation as soon as I've had a chance to review the order.
-      \n\nOrder Details:\n${cart.map(item => `${item.title} - ${item.name} - ${item.size}`).join('\n')}
+      \n\nOrder Details:\n${cart.map(item => `${item.title} - ${item.cakeBase} - ${item.filling} - ${item.buttercream} - ${item.soak} - ${item.size}`).join('\n')}
       \n\nWarmest regards,\nLiv
     `;
 
     const ownerEmailContent = `
-      New Order:\n${cart.map(item => `${item.title} - ${item.name} - ${item.size}`).join('\n')}
+      New Order:\n${cart.map(item => `${item.title} - ${item.cakeBase} - ${item.filling} - ${item.buttercream} - ${item.soak} - ${item.size}`).join('\n')}
       \nPickup Date: ${pickupDate}
       \nCustomer Email: ${email}
     `;
@@ -44,7 +44,7 @@ const CartComponent = () => {
           <li key={index}>
             <div>
               <div className='font-medium'>{item.title}</div>
-              <div className='font-small'>{item.name} - {item.size} - ${item.divrice}</div>
+              <div className='font-small'>{item.cakeBase} - {item.filling} - {item.buttercream} - {item.soak} - {item.size} - ${item.price}</div>
             </div>
           </li>
         ))}

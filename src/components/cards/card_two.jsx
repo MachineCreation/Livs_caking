@@ -17,7 +17,7 @@ const CardTwo = () => {
       </p>
       <CButton
         title={'BYO Cake Menu'}
-        action={'/Build-your-own'}
+        action={'/menu#BYO'}
       />
     </div>
   );
