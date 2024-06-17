@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useCart } from '../../config/CartContext';
+import emailjs from 'emailjs-com';
 
 //css
-import '../../css/cart.css'
+import '../../css/cart.css';
 
 const CartComponent = () => {
   const { cart, emptyCart } = useCart();
   const [email, setEmail] = useState('');
   const [pickupDate, setPickupDate] = useState('');
+  const [name, setName] = useState('')
 
   const handlePlaceOrder = () => {
     if (!email || !pickupDate) return;
@@ -24,9 +26,28 @@ const CartComponent = () => {
       \nCustomer Email: ${email}
     `;
 
-    console.log("Sending emails...");
-    console.log("To Customer:", customerEmailContent);
-    console.log("To Owner:", ownerEmailContent);
+    // Send emails using EmailJS
+    emailjs.send('your_service_id', 'your_template_id', {
+      to_email: email,
+      from_name: 'Cakes by Liv',
+      message: customerEmailContent
+    }, 'your_user_id')
+    .then((response) => {
+      console.log('Customer email sent!', response.status, response.text);
+    }, (err) => {
+      console.error('Failed to send customer email. Error:', err);
+    });
+
+    emailjs.send('your_service_id', 'your_template_id', {
+      to_email: 'owner@example.com', // Replace with your email
+      from_name: 'Cakes by Liv',
+      message: ownerEmailContent
+    }, 'your_user_id')
+    .then((response) => {
+      console.log('Owner email sent!', response.status, response.text);
+    }, (err) => {
+      console.error('Failed to send owner email. Error:', err);
+    });
 
     emptyCart();
     setEmail('');
@@ -39,7 +60,7 @@ const CartComponent = () => {
   return (
     <div id="cart-main">
       <div className='title font-large'>Your Cart</div>
-      <ul>
+      <ul id='cart-list'>
         {cart.map((item, index) => (
           <li key={index}>
             <div>
@@ -55,7 +76,7 @@ const CartComponent = () => {
       <button onClick={emptyCart}>Empty Cart</button>
       <button onClick={handlePlaceOrder} disabled={!cart.length}>Place Order</button>
       {cart.length > 0 && (
-        <div>
+        <div id='user-info'>
           <input
             type="email"
             placeholder="Your Email"

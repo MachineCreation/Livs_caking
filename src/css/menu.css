@@ -4,6 +4,7 @@
 .content-main {
     width: 100%;
     height: auto;
+
 }
 
 .break {
@@ -12,6 +13,7 @@
     max-width: 525px;
     margin: 30px auto;
 }
+
 .menu-content{
     display: flex;
     flex-direction: column;
@@ -100,6 +102,7 @@
     height: calc(30vw * 2.15);
     top: 0;
     right: calc(50vw * 1.3);
+    z-index: -1;
 }
 
 #right-flower {
@@ -111,6 +114,7 @@
     height: calc(30vw * 2.15);
     bottom: 0;
     left: calc(50vw * 1.3);
+    z-index: -1;
 }
 
 .sticky-button {
@@ -133,16 +137,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .modal {
-    background: white;
+    flex-direction: column;
+    display: flex;
+    background-color: #d4d0c2;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1em 1em #b7ab9a;
     max-width: 500px;
-    width: 100%;
+    width: 80vw;
+}
+
+.modal label {
+    margin: .4em;
+}
+
+.modal label:last-child {
+    margin-bottom: 1em;
+}
+
+.modal select {
+    background-color: #b7ab9a;
+    border-radius: .4em;
+    max-width: 15em;
+    padding: .2em;
+}
+
+.modal select::before {
+    content: '';
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    background-color: #b7ab9a;
+    border-radius: .4em;
+    max-width: 15em;
+    padding: .2em;
 }
 
 

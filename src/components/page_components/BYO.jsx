@@ -49,6 +49,7 @@ const BYO = () => {
 
     return (
         <div className="content-main">
+            <div className="break"></div>
             <div className="title font-large">Build Your Own</div>
             <button onClick={handleButtonClick}>Customize Your Cake</button>
             <div id="BYO" className="BYO-content">
@@ -88,7 +89,7 @@ const BYO = () => {
                 <div className="modal-overlay" onClick={() => setModalVisible(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
                     <div className="title font-large">{selectedItem.title}</div>
-                        <div className="input-area">
+                        <div className="input-area accent">
                             <label>
                                 Cake Bases:
                                 <select name="cakeBase" value={selectedItem.cakeBase} onChange={handleInputChange}>

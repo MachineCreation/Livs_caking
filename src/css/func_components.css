@@ -4,7 +4,7 @@ button {
     background-color: #f4f0e5;
     border: .2em double #4c300eff;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 1000;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px auto;
@@ -13,7 +13,7 @@ button {
 
 .button-link{
     color: #b7ab9a;
-    -webkit-text-stroke: .05rem #4c300eff;
+    -webkit-text-stroke: .045rem #4c300eff;
     text-decoration: none;
 }
 

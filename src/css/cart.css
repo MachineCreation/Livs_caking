@@ -50,6 +50,23 @@
     right: -2rem;
 }
 
+#user-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+input {
+    background-color: #b7ab9a;
+    border-radius: .4em;
+    max-width: 15em;
+    padding: .2em;
+}
+
+#cart-list li {
+    margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 400px) {
     #right-leaves{
         width: 120px;
